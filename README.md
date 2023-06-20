@@ -1,5 +1,8 @@
 # UVB-76-Decoder v1.0-rc3
-UVB decoder
+
+## Requirements:
+
+    pip install -r requirements.txt
 
 ## Compile:
 
