@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0.rc1
+# Release: v1.0.rc3
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -21,12 +21,14 @@
 
 import os
 import time
+import datetime
 
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 
 from src.decode_pt_module import *
+from src.decode_us_module import *
 
 
 window = Tk()
@@ -39,25 +41,32 @@ window.attributes('-alpha',9.1)
 #window.iconphoto(True, foto_icon)
 
 
-
 def decode_message():
 
     code = entrada_de_dados.get()
-
-    list_messages = [code[0],
-                     code[1],
-                     code[2],]
-    
-    
-
-    for numero in list_messages:
-        print(list_messages)
+    numeros = [int(num) for num in code.split(",")]
+    name_file = str(datetime.datetime.now())
+    arquivo_saida = open("UVB-76-Decode-" + name_file + ".txt", "w")
 
     if var_portugues.get() == 1:
-        pass
-    elif var_ingles.get() == 1:
-        pass
+        for num in numeros:
+            if num in message_text_pt:
+                texto = message_text_pt[num]
+                arquivo_saida.write(texto+"\n")
 
+                print(message_text_pt[num])
+            else:
+                print("Número não possui um texto correspondente.")
+
+    elif var_ingles.get() == 1:
+        for num in numeros:
+            if num in message_text_en:
+                texto = message_text_en[num]
+                arquivo_saida.write(texto+"\n")
+
+                print(message_text_en[num])
+            else:
+                print("Número não possui um texto correspondente.")
 
 
 var_portugues = IntVar()
