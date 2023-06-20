@@ -44,6 +44,15 @@ def decode_message():
 
     code = entrada_de_dados.get()
 
+    list_messages = [code[0],
+                     code[1],
+                     code[2],]
+    
+    
+
+    for numero in list_messages:
+        print(list_messages)
+
     if var_portugues.get() == 1:
         pass
     elif var_ingles.get() == 1:
@@ -88,7 +97,7 @@ lbl = Label(window, text = "")
 botao_decode = Button(window,
                 text="Decode",
                 command=decode_message,
-                width=2,).place(x=2, y=2)
+                width=60,).place(x=2, y=2)
 
 
 if __name__ == "__main__":
