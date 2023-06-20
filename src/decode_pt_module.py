@@ -18,7 +18,7 @@ message_text_pt = {
     15: "SENHOR, quem habitará no teu tabernáculo? Quem morará no teu santo monte?",
     16: "Guarda-me, ó Deus, porque em ti confio.",
     17: "Ouve, SENHOR, a justiça; atende ao meu clamor; dá ouvidos à minha oração, que não é feita com lábios enganosos.",
-    18: "",
+    18: "Eu te amarei, ó SENHOR, fortaleza minha.",
     19: "",
     20: "",
     21: "",
