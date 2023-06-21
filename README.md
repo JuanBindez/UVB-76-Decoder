@@ -1,4 +1,4 @@
-# UVB-76-Decoder v1.0-rc5
+# UVB-76-Decoder 1.0-rc5
 
 ## Requirements:
 
