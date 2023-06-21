@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0.rc4
+# Release: v1.0.rc5
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -67,6 +67,9 @@ def decode_message():
                 print(message_text_en[num])
             else:
                 print("Número não possui um texto correspondente.")
+
+    elif var_portugues.get() == 0 and var_ingles.get() == 0:
+        print("marque idioma")
 
 
 var_portugues = IntVar()
