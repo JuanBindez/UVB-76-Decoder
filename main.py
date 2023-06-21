@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0.rc3
+# Release: v1.0.rc4
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -102,11 +102,26 @@ entrada_de_dados.place(x=95, y=170)
 entrada_de_dados.bind_class("Entry", "<Button-3><ButtonRelease-3>", show_menu)
 lbl = Label(window, text = "")
 
+def funcao_opcao1():
+    print("Opção 1 selecionada")
+
+def funcao_opcao2():
+    exit()
+
+
+menu_barra = Menu(window)
+
+menu_arquivo = Menu(menu_barra, tearoff=0)
+menu_arquivo.add_command(label="Help", command=funcao_opcao1)
+menu_arquivo.add_command(label="Quit", command=funcao_opcao2)
+
+menu_barra.add_cascade(label="Menu", menu=menu_arquivo)
+window.config(menu=menu_barra)
 
 botao_decode = Button(window,
                 text="Decode",
                 command=decode_message,
-                width=60,).place(x=2, y=2)
+                width=60,).place(x=2, y=300)
 
 
 if __name__ == "__main__":
