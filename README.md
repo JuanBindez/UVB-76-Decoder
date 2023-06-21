@@ -1,4 +1,4 @@
-# UVB-76-Decoder v1.0-rc4
+# UVB-76-Decoder v1.0-rc5
 
 ## Requirements:
 
@@ -6,4 +6,4 @@
 
 ## Compile:
 
-    pyinstaller --name UVB-76-Decoder-v1.0-rc4-x86_64-Ubuntu --onefile --noconsole --windowed  main.py
+    pyinstaller --name UVB-76-Decoder-v1.0-rc5-x86_64-Ubuntu --onefile --noconsole --windowed  main.py
