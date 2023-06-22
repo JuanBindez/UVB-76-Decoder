@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0.rc5
+# Release: v1.0-rc6
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -26,6 +26,7 @@ import datetime
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter import font
 
 from src.decode_pt_module import *
 from src.decode_us_module import *
@@ -121,10 +122,19 @@ menu_arquivo.add_command(label="Quit", command=funcao_opcao2)
 menu_barra.add_cascade(label="Menu", menu=menu_arquivo)
 window.config(menu=menu_barra)
 
+
+fonte_personalizada = font.Font(family="Times New Roman", size=24)
+label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=100, y=100)
+
+font_footer = font.Font(family="Times New Roman", size=12)
+label = Label(window, text="1.0-rc6", font=font_footer).place(x=160, y=340)
+
+font_decode = font.Font(family="Times New Roman", size=16)
 botao_decode = Button(window,
                 text="Decode",
+                font=font_decode,
                 command=decode_message,
-                width=60,).place(x=2, y=300)
+                width=40,).place(x=2, y=300)
 
 
 if __name__ == "__main__":
