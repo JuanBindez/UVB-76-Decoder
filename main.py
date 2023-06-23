@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0-rc7
+# Release: v1.0-rc8
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -27,6 +27,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 from tkinter import font
+from tkinter import messagebox
 
 from src.decode_pt_module import *
 from src.decode_us_module import *
@@ -57,7 +58,7 @@ def decode_message():
 
                 print(message_text_pt[num])
             else:
-                print("Número não possui um texto correspondente.")
+                messagebox.showerror("UVB-76 Decoder", "Número não possui um texto correspondente.")
 
     elif var_ingles.get() == 1:
         for num in numeros:
@@ -70,7 +71,10 @@ def decode_message():
                 print("Número não possui um texto correspondente.")
 
     elif var_portugues.get() == 0 and var_ingles.get() == 0:
-        print("marque idioma")
+        messagebox.showerror("UVB-76 Decoder", "Check a language!")
+
+    messagebox.showinfo("UVB-76 Decoder",
+                                    "A .txt file was generated, there will be the decoding")
 
 
 var_portugues = IntVar()
@@ -127,14 +131,14 @@ fonte_personalizada = font.Font(family="Times New Roman", size=24)
 label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=150, y=100)
 
 font_footer = font.Font(family="Times New Roman", size=12)
-label = Label(window, text="1.0-rc7", font=font_footer).place(x=410, y=340)
+label = Label(window, text="1.0-rc8", font=font_footer).place(x=410, y=340)
 
 font_decode = font.Font(family="Times New Roman", size=16)
 botao_decode = Button(window,
                 text="Decode",
                 font=font_decode,
                 command=decode_message,
-                width=45,).place(x=2, y=300)
+                width=45,).place(x=0, y=300)
 
 
 if __name__ == "__main__":
