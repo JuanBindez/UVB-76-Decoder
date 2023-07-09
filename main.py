@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0-rc8
+# Release: v1.0.0
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -31,6 +31,8 @@ from tkinter import messagebox
 
 from src.decode_pt_module import *
 from src.decode_us_module import *
+from src.check_update_module import *
+from src.aboult import *
 
 
 window = Tk()
@@ -110,28 +112,22 @@ entrada_de_dados.place(x=95, y=170)
 entrada_de_dados.bind_class("Entry", "<Button-3><ButtonRelease-3>", show_menu)
 lbl = Label(window, text = "")
 
-def funcao_opcao1():
-    print("Opção 1 selecionada")
-
-def funcao_opcao2():
-    exit()
 
 
 menu_barra = Menu(window)
 
 menu_arquivo = Menu(menu_barra, tearoff=0)
-menu_arquivo.add_command(label="Help", command=funcao_opcao1)
-menu_arquivo.add_command(label="Quit", command=funcao_opcao2)
+menu_arquivo.add_command(label="Help", command=help_info)
 
 menu_barra.add_cascade(label="Menu", menu=menu_arquivo)
 window.config(menu=menu_barra)
 
 
 fonte_personalizada = font.Font(family="Times New Roman", size=24)
-label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=150, y=100)
+label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=130, y=100)
 
 font_footer = font.Font(family="Times New Roman", size=12)
-label = Label(window, text="1.0-rc8", font=font_footer).place(x=410, y=340)
+label = Label(window, text="1.0.0", font=font_footer).place(x=410, y=340)
 
 font_decode = font.Font(family="Times New Roman", size=16)
 botao_decode = Button(window,
@@ -142,4 +138,5 @@ botao_decode = Button(window,
 
 
 if __name__ == "__main__":
+    check_new_version("1.0.0")
     window.mainloop()
