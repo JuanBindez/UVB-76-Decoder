@@ -8,7 +8,7 @@ import webbrowser
 
 
 def check_new_version(current_version):
-    version_url = "https://raw.githubusercontent.com/JuanBindez/UVB-76_Decoder/main/version.json"
+    version_url = "https://raw.githubusercontent.com/JuanBindez/UVB-76-Decoder/main/version.json"
 
     try:
         with urllib.request.urlopen(version_url) as response:
