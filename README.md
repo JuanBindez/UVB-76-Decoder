@@ -1,4 +1,4 @@
-# UVB-76-Decoder 1.0-rc8
+# UVB-76-Decoder 1.0.0
 
 ## Requirements:
 
