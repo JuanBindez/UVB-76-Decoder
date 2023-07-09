@@ -50,7 +50,7 @@ def decode_message():
     code = entrada_de_dados.get()
     numeros = [int(num) for num in code.split(",")]
     name_file = str(datetime.datetime.now())
-    arquivo_saida = open("UVB-76-Decode-" + name_file + ".txt", "w")
+    arquivo_saida = open("UVB-76-out.txt", "w")
 
     if var_portugues.get() == 1:
         for num in numeros:
