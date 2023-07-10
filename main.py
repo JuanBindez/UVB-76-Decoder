@@ -1,6 +1,6 @@
 # this is part of the UVB-76-Decoder project.
 #
-# Release: v1.0.0
+# Release: v1.1-rc1
 #
 # Copyright © 2023  Juan Bindez  <juanbindez780@gmail.com>
 #
@@ -48,9 +48,9 @@ window.attributes('-alpha',9.1)
 def decode_message():
 
     code = entrada_de_dados.get()
-    numeros = [int(num) for num in code.split(",")]
+    numeros = [int(num) for num in code.split(" ")]
     name_file = str(datetime.datetime.now())
-    arquivo_saida = open("UVB-76-out.txt", "w")
+    arquivo_saida = open(f"UVB-76-code-({numeros}).doc", "w")
 
     if var_portugues.get() == 1:
         for num in numeros:
@@ -127,7 +127,7 @@ fonte_personalizada = font.Font(family="Times New Roman", size=24)
 label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=130, y=100)
 
 font_footer = font.Font(family="Times New Roman", size=12)
-label = Label(window, text="1.0.0", font=font_footer).place(x=410, y=340)
+label = Label(window, text="1.1-rc1", font=font_footer).place(x=410, y=340)
 
 font_decode = font.Font(family="Times New Roman", size=16)
 botao_decode = Button(window,
