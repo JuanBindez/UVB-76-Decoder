@@ -112,8 +112,6 @@ entrada_de_dados.place(x=95, y=170)
 entrada_de_dados.bind_class("Entry", "<Button-3><ButtonRelease-3>", show_menu)
 lbl = Label(window, text = "")
 
-
-
 menu_barra = Menu(window)
 
 menu_arquivo = Menu(menu_barra, tearoff=0)
