@@ -120,7 +120,6 @@ menu_arquivo.add_command(label="Help", command=help_info)
 menu_barra.add_cascade(label="Menu", menu=menu_arquivo)
 window.config(menu=menu_barra)
 
-
 fonte_personalizada = font.Font(family="Times New Roman", size=24)
 label = Label(window, text="UVB-76 Decoder", font=fonte_personalizada).place(x=130, y=100)
 
@@ -133,7 +132,6 @@ botao_decode = Button(window,
                 font=font_decode,
                 command=decode_message,
                 width=45,).place(x=0, y=300)
-
 
 if __name__ == "__main__":
     check_new_version("1.0.0")
