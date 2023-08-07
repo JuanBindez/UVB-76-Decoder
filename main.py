@@ -44,7 +44,6 @@ window.attributes('-alpha',9.1)
 #foto_icon = PhotoImage(data=base64.b64decode(ICON_LOGO))
 #window.iconphoto(True, foto_icon)
 
-
 def decode_message():
 
     code = entrada_de_dados.get()
